@@ -1,6 +1,6 @@
 ### Dockerized Kafka
 
- The following replacements will take place based on ENV_VAR / kafka server property, check the [Kafka documentation](http://kafka.apache.org/documentation.html#brokerconfigs) for their full meaning.
+ The following replacements will take place based on ENV_VAR / kafka server property, check the [Kafka documentation (section 3.1)](http://kafka.apache.org/documentation.html) for their full meaning.
 
  The replacements will take place on the default Kafka distribution `conf/server.properties` file, [for example](https://github.com/apache/kafka/blob/0.8.2.1/config/server.properties)
 
