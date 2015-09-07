@@ -74,3 +74,25 @@ weave run -dt --name=kafka3 \
  -v /logs2 \
  grumpydocker/kafka
 ```
+
+### Topic Management
+
+Create a topic
+```
+weave run -it --rm grumpydocker/kafka /kafka/bin/kafka-topics.sh --create --zookeeper zoo1:2181/kafka --replication-factor 1 --partitions 1 --topic test
+```
+
+List topics
+```
+weave run -it --rm grumpydocker/kafka /kafka/bin/kafka-topics.sh --list --zookeeper zoo1:2181/kafka
+```
+
+Describe all topics
+```
+weave run -it --rm grumpydocker/kafka /kafka/bin/kafka-topics.sh --describe --zookeeper zoo1:2181/kafka
+```
+
+Describe a specific topic
+```
+weave run -it --rm grumpydocker/kafka /kafka/bin/kafka-topics.sh --describe --zookeeper zoo1:2181/kafka --topic test
+```
