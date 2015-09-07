@@ -140,7 +140,7 @@ fi
 
 if [ ! -z "${KAFKA_ZK_CONNECT}" ]; then
     echo "KAFKA_ZK_CONNECT: ${KAFKA_ZK_CONNECT}"
-    sed -r -i "s/(zookeeper\.connect)=.*/\1=${KAFKA_ZK_CONNECT}/g" /kafka/config/server.properties
+    sed -r -i "s|(zookeeper\.connect)=.*|\1=${KAFKA_ZK_CONNECT}|g" /kafka/config/server.properties
 fi
 
 echo "==== START /kafka/config/server.properties ===="

@@ -52,7 +52,7 @@ Run a three node Kafka cluster where zoo1, zoo2 and zoo3 are DNS resolvable host
 ```
 weave run -dt --name=kafka1 \
  -e KAFKA_BROKER_ID=0 \
- -e KAFKA_ZK_CONNECT=zoo1:2181,zoo2:2181,zoo3:2181 \
+ -e KAFKA_ZK_CONNECT=zoo1:2181,zoo2:2181,zoo3:2181/kafka \
  -e KAFKA_LOG_DIRS=/logs1,/logs2 \
  -v /logs1 \
  -v /logs2 \
@@ -60,7 +60,7 @@ weave run -dt --name=kafka1 \
 
 weave run -dt --name=kafka2 \
  -e KAFKA_BROKER_ID=1 \
- -e KAFKA_ZK_CONNECT=zoo1:2181,zoo2:2181,zoo3:2181 \
+ -e KAFKA_ZK_CONNECT=zoo1:2181,zoo2:2181,zoo3:2181/kafka \
  -e KAFKA_LOG_DIRS=/logs1,/logs2 \
  -v /logs1 \
  -v /logs2 \
@@ -68,7 +68,7 @@ weave run -dt --name=kafka2 \
 
 weave run -dt --name=kafka3 \
  -e KAFKA_BROKER_ID=2 \
- -e KAFKA_ZK_CONNECT=zoo1:2181,zoo2:2181,zoo3:2181 \
+ -e KAFKA_ZK_CONNECT=zoo1:2181,zoo2:2181,zoo3:2181/kafka \
  -e KAFKA_LOG_DIRS=/logs1,/logs2 \
  -v /logs1 \
  -v /logs2 \
