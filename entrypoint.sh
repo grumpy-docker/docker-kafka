@@ -114,7 +114,7 @@ if [ ! -z "${KAFKA_ADVERTISED_HOST_NAME}" ]; then
 fi
 
 if [ ! -z "${KAFKA_ADVERTISED_PORT}" ]; then
-    echo "KAFKA_ADVERTISED_HOST_NAME: ${KAFKA_ADVERTISED_PORT}"
+    echo "KAFKA_ADVERTISED_PORT: ${KAFKA_ADVERTISED_PORT}"
     sed -r -i "s/#(advertised\.port)=.*/\1=${KAFKA_ADVERTISED_PORT}/g" /kafka/config/server.properties
 fi
 
