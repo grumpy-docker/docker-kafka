@@ -5,6 +5,7 @@
 # KAFKA_BROKER_ID / broker.id
 # KAFKA_PORT / port
 # KAFKA_HOSTNAME / #host.name (bind to hostname, default is all interfaces)
+# KAFKA_LISTENERS / listeners
 # KAFKA_ADVERTISED_HOST_NAME / #advertised.host.name
 # KAFKA_ADVERTISED_PORT / #advertised.port
 # KAFKA_LOG_DIRS / log.dirs
@@ -50,7 +51,12 @@ fi
 
 if [ ! -z "${KAFKA_PORT}" ]; then
     echo "KAFKA_PORT: ${KAFKA_PORT}"
-    sed -r -i "s/(port)=.*/\1=${KAFKA_PORT}/g" /kafka/config/server.properties
+    sed -r -i "s/#(port)=.*/\1=${KAFKA_PORT}/g" /kafka/config/server.properties
+fi
+
+if [ ! -z "${KAFKA_LISTENERS}" ]; then
+    echo "KAFKA_LISTENERS: ${KAFKA_LISTENERS}"
+    sed -r -i "s|(listeners)=.*|\1=${KAFKA_LISTENERS}|g" /kafka/config/server.properties
 fi
 
 if [ ! -z "${KAFKA_HOSTNAME}" ]; then
