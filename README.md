@@ -29,9 +29,9 @@
 |ENV VAR|Kafka server property|Default|
 |-------|---------------------|-------|
 |KAFKA_ADVERTISED_HOST_NAME|advertised.host.name|kafka1|
-|KAFKA_ADVERTISED_LISTENERS|advertised.listeners| |
+|KAFKA_ADVERTISED_LISTENERS|advertised.listeners|null|
 |KAFKA_ADVERTISED_PORT|advertised.port|9092|
-|KAFKA_AUTHORIZER_CLASS_NAME|authorizer.class.name| |
+|KAFKA_AUTHORIZER_CLASS_NAME|authorizer.class.name|null|
 |KAFKA_AUTO_LEADER_REBALANCE_ENABLE|auto.leader.rebalance.enable|true|
 |KAFKA_BACKGROUND_THREADS|background.threads|10|
 |KAFKA_COMPRESSION_TYPE|compression.type|producer|
@@ -59,7 +59,7 @@
 |KAFKA_LOG_CLEANER_THREADS|log.cleaner.threads|1|
 |KAFKA_LOG_CLEANUP_POLICY|log.cleanup.policy|delete|
 |KAFKA_LOG_FLUSH_INTERVAL_MESSAGES|log.flush.interval.messages|9223372036854775807|
-|KAFKA_LOG_FLUSH_INTERVAL_MS|log.flush.interval.ms| |
+|KAFKA_LOG_FLUSH_INTERVAL_MS|log.flush.interval.ms|null|
 |KAFKA_LOG_FLUSH_OFFSET_CHECKPOINT_INTERVAL_MS|log.flush.offset.checkpoint.interval.ms|60000|
 |KAFKA_LOG_FLUSH_SCHEDULER_INTERVAL_MS|log.flush.scheduler.interval.ms|9223372036854775807|
 |KAFKA_LOG_INDEX_INTERVAL_BYTES|log.index.interval.bytes|4096|
@@ -69,16 +69,16 @@
 |KAFKA_LOG_RETENTION_CHECK_INTERVAL_MS|log.retention.check.interval.ms|300000|
 |KAFKA_LOG_RETENTION_CHECK_INTERVAL_MS|log.retention.check.interval.ms|300000|
 |KAFKA_LOG_RETENTION_HOURS|log.retention.hours|168|
-|KAFKA_LOG_RETENTION_MINUTES|log.retention.minutes| |
-|KAFKA_LOG_RETENTION_MS|log.retention.ms| |
+|KAFKA_LOG_RETENTION_MINUTES|log.retention.minutes|null|
+|KAFKA_LOG_RETENTION_MS|log.retention.ms|null|
 |KAFKA_LOG_ROLL_HOURS|log.roll.hours|168|
 |KAFKA_LOG_ROLL_JITTER_HOURS|log.roll.jitter.hours|0|
-|KAFKA_LOG_ROLL_JITTER_MS|log.roll.jitter.ms| |
-|KAFKA_LOG_ROLL_MS|log.roll.ms| |
+|KAFKA_LOG_ROLL_JITTER_MS|log.roll.jitter.ms|null|
+|KAFKA_LOG_ROLL_MS|log.roll.ms|null|
 |KAFKA_LOG_SEGMENT_BYTES|log.segment.bytes|1073741824|
 |KAFKA_LOG_SEGMENT_BYTES|log.segment.bytes|1073741824|
 |KAFKA_LOG_SEGMENT_DELETE_DELAY_MS|log.segment.delete.delay.ms|60000|
-|KAFKA_MAX_CONNECTIONS_PER_IP_OVERRIDES|max.connections.per.ip.overrides| |
+|KAFKA_MAX_CONNECTIONS_PER_IP_OVERRIDES|max.connections.per.ip.overrides|null|
 |KAFKA_MAX_CONNECTIONS_PER_IP|max.connections.per.ip|2147483647|
 |KAFKA_METRIC_REPORTERS|metric.reporters|[]|
 |KAFKA_METRICS_NUM_SAMPLES|metrics.num.samples|2|
@@ -121,7 +121,7 @@
 |KAFKA_SASL_KERBEROS_KINIT_CMD|sasl.kerberos.kinit.cmd|/usr/bin/kinit|
 |KAFKA_SASL_KERBEROS_MIN_TIME_BEFORE_RELOGIN|sasl.kerberos.min.time.before.relogin|60000|
 |KAFKA_SASL_KERBEROS_PRINCIPAL_TO_LOCAL_RULES|sasl.kerberos.principal.to.local.rules|[DEFAULT]|
-|KAFKA_SASL_KERBEROS_SERVICE_NAME|sasl.kerberos.service.name| |
+|KAFKA_SASL_KERBEROS_SERVICE_NAME|sasl.kerberos.service.name|null|
 |KAFKA_SASL_KERBEROS_TICKET_RENEW_JITTER|sasl.kerberos.ticket.renew.jitter|0.05|
 |KAFKA_SASL_KERBEROS_TICKET_RENEW_WINDOW_FACTOR|sasl.kerberos.ticket.renew.window.factor|0.8|
 |KAFKA_SECURITY_INTER_BROKER_PROTOCOL|security.inter.broker.protocol|PLAINTEXT|
@@ -131,23 +131,23 @@
 |KAFKA_SOCKET_REQUEST_MAX_BYTES|socket.request.max.bytes|104857600|
 |KAFKA_SOCKET_SEND_BUFFER_BYTES|socket.send.buffer.bytes|102400|
 |KAFKA_SOCKET_SEND_BUFFER_BYTES|socket.send.buffer.bytes|102400|
-|KAFKA_SSL_CIPHER_SUITES|ssl.cipher.suites| |
+|KAFKA_SSL_CIPHER_SUITES|ssl.cipher.suites|null|
 |KAFKA_SSL_CLIENT_AUTH|ssl.client.auth|none|
 |KAFKA_SSL_ENABLED_PROTOCOLS|ssl.enabled.protocols|[TLSv1.2]|
-|KAFKA_SSL_ENDPOINT_IDENTIFICATION_ALGORITHM|ssl.endpoint.identification.algorithm| |
-|KAFKA_SSL_KEY_PASSWORD|ssl.key.password| |
+|KAFKA_SSL_ENDPOINT_IDENTIFICATION_ALGORITHM|ssl.endpoint.identification.algorithm|null|
+|KAFKA_SSL_KEY_PASSWORD|ssl.key.password|null|
 |KAFKA_SSL_KEYMANAGER_ALGORITHM|ssl.keymanager.algorithm|SunX509|
-|KAFKA_SSL_KEYSTORE_LOCATION|ssl.keystore.location| |
-|KAFKA_SSL_KEYSTORE_PASSWORD|ssl.keystore.password| |
+|KAFKA_SSL_KEYSTORE_LOCATION|ssl.keystore.location|null|
+|KAFKA_SSL_KEYSTORE_PASSWORD|ssl.keystore.password|null|
 |KAFKA_SSL_KEYSTORE_TYPE|ssl.keystore.type|JKS|
 |KAFKA_SSL_PROTOCOL|ssl.protocol|TLS|
-|KAFKA_SSL_PROVIDER|ssl.provider| |
+|KAFKA_SSL_PROVIDER|ssl.provider|null|
 |KAFKA_SSL_TRUSTMANAGER_ALGORITHM|ssl.trustmanager.algorithm|PKIX|
-|KAFKA_SSL_TRUSTSTORE_LOCATION|ssl.truststore.location| |
-|KAFKA_SSL_TRUSTSTORE_PASSWORD|ssl.truststore.password| |
+|KAFKA_SSL_TRUSTSTORE_LOCATION|ssl.truststore.location|null|
+|KAFKA_SSL_TRUSTSTORE_PASSWORD|ssl.truststore.password|null|
 |KAFKA_SSL_TRUSTSTORE_TYPE|ssl.truststore.type|JKS|
 |KAFKA_UNCLEAN_LEADER_ELECTION_ENABLE|unclean.leader.election.enable|true|
-|KAFKA_ZOOKEEPER_CONNECTION_TIMEOUT_MS|zookeeper.connection.timeout.ms| |
+|KAFKA_ZOOKEEPER_CONNECTION_TIMEOUT_MS|zookeeper.connection.timeout.ms|null|
 |KAFKA_ZOOKEEPER_SESSION_TIMEOUT_MS|zookeeper.session.timeout.ms|6000|
 |KAFKA_ZOOKEEPER_SET_ACL|zookeeper.set.acl|false|
 |KAFKA_ZOOKEEPER_SYNC_TIME_MS|zookeeper.sync.time.ms|2000|
