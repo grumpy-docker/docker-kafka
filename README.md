@@ -69,7 +69,6 @@
 |KAFKA_LOG_RETENTION_CHECK_INTERVAL_MS|log.retention.check.interval.ms|300000|
 |KAFKA_LOG_RETENTION_CHECK_INTERVAL_MS|log.retention.check.interval.ms|300000|
 |KAFKA_LOG_RETENTION_HOURS|log.retention.hours|168|
-|KAFKA_LOG_RETENTION_HOURS|log.retention.hours|876000|
 |KAFKA_LOG_RETENTION_MINUTES|log.retention.minutes||
 |KAFKA_LOG_RETENTION_MS|log.retention.ms||
 |KAFKA_LOG_ROLL_HOURS|log.roll.hours|168|
