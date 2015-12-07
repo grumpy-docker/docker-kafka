@@ -17,6 +17,8 @@ RUN wget -q http://apache.cs.utah.edu/kafka/"$KAFKA_VERSION"/kafka_"$SCALA_VERSI
 # Forces DNS resolution before /etc/hosts
 RUN sed 's/^\(hosts:[\ ]*\)\(files\)\ \(dns\)$/\1\3 \2/' -i /etc/nsswitch.conf
 
+ADD server.properties /kafka/config/server.properties
+
 EXPOSE 9092
 
 CMD ["/entrypoint.sh"]
